@@ -9,6 +9,16 @@
 #include "dice.h"
 #include <iostream>
 #include <string>
+#include <vector>
+#include <algorithm>
+
+bool special_tile(vector<int>& my_list, int target) {
+    if (find(my_list.begin(), my_list.end(), target) != my_list.end()) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 void expressGame() {
     Tablero newGame;
@@ -16,11 +26,13 @@ void expressGame() {
     int turn = 1;
     int playingPlayer = 1;
     int numberOfPlayers = 2;
+    vector<int> snakes = {8,23,27,32,37,39,73,78,81,99};
+    vector<int> ladders = {3,1,25,33,44,47,58,71,74,96};
     char option;
     string name1, name2;
 
     cout << "In this game the L board squares will increase position by 3, S board squares will decrease position by 3." << endl;
-    cout << "As soon as a player reaches 100 or over, wins." << endl;
+    cout << "As soon as a player reaches tile number 100 or over, wins." << endl;
 
     Player player1 = Player(1);
     Player player2 = Player(2);
@@ -55,6 +67,25 @@ void expressGame() {
                     newPos = actualPos + roll;
                     cout << "The dice rolled: " << roll << endl;
                     cout << player1.getName() << " goes to square " << newPos << endl;
+
+                    bool SnakeTile = special_tile(snakes,newPos);
+                    bool LadderTile = special_tile(ladders, newPos);
+
+                    //MODIFICADORES
+                    if (SnakeTile || LadderTile){
+                        if (SnakeTile){
+                            cout<<"Uh oh! tile "<<newPos<<" was a SNAKE tile! You slither down to square "<<newPos-3<<endl;
+                            newPos-=3;
+                        }
+                        if (LadderTile){
+                            cout<<"Jolly! tile "<<newPos<<" was a LADDER tile! You climb up to square "<<newPos-3<<endl;
+                            newPos+=3;
+                        }
+                        else{
+                            continue;
+                        }
+                    }
+
                     player1.setPosition(newPos);
                     playingPlayer = 2;
                 } else {

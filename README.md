@@ -1,9 +1,7 @@
 # snakesAndLadders
 
-⠀.*-" we live
-we love
-we love
-we love
+⠀.*-" we live,
+we love,
 we lie "-*.
 ⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⢀⡤⠞⠉⠁⠀⠀⠈⠳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

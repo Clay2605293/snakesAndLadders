@@ -1,0 +1,6 @@
+# ninja log v5
+0	508	1716478928355994795	CMakeFiles/SerpientesEscaleras.dir/main.cpp.o	50b08b79b473b4c3
+1	510	1716478928360983527	CMakeFiles/SerpientesEscaleras.dir/tablero.cpp.o	71eaf5c7aa8c0f1b
+1	511	1716478928356224504	CMakeFiles/SerpientesEscaleras.dir/player.cpp.o	71e9f8b001f5ccb3
+1	572	1716478928422836605	CMakeFiles/SerpientesEscaleras.dir/dice.cpp.o	3828e72322ee65fb
+573	667	1716478928518371548	SerpientesEscaleras	613115723b41c5a6

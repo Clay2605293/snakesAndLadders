@@ -1,6 +1,7 @@
 #include <iostream>
 #include "tablero.h"
 #include "expressGame.h"
+#include "traditionalRules.h"
 using namespace std;
 
 
@@ -20,6 +21,7 @@ int main() {
         switch (option) {
             case '1':
                 cout << "Traditional Game" << endl;
+                tradGame();
                 return 0;
             case '2':
                 cout << "Express Game" << endl;

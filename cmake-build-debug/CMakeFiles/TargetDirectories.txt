@@ -1,3 +1,3 @@
-/Users/cgh/Documents/Ingenieria en teconologias computacionales/2024/Ene-Jun/Programación Orientada a Objetos/SerpientesEscaleras/cmake-build-debug/CMakeFiles/SerpientesEscaleras.dir
-/Users/cgh/Documents/Ingenieria en teconologias computacionales/2024/Ene-Jun/Programación Orientada a Objetos/SerpientesEscaleras/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/cgh/Documents/Ingenieria en teconologias computacionales/2024/Ene-Jun/Programación Orientada a Objetos/SerpientesEscaleras/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/cgh/Documents/GitHub/snakesAndLadders/cmake-build-debug/CMakeFiles/SerpientesEscaleras.dir
+/Users/cgh/Documents/GitHub/snakesAndLadders/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/cgh/Documents/GitHub/snakesAndLadders/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -19,7 +19,7 @@ public:
 //Constructor
     void setName(string name);
     string getName();
-    void setPosition(int name);
+    void setPosition(int pos);
     int getPosition();
     Player(int playerNum);
 };

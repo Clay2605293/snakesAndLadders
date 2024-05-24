@@ -4,6 +4,7 @@
 
 #ifndef SERPIENTESESCALERAS_EXPRESSGAME_H
 #define SERPIENTESESCALERAS_EXPRESSGAME_H
+
 #include "tablero.h"
 #include "player.h"
 #include "dice.h"
@@ -12,12 +13,10 @@
 #include <vector>
 #include <algorithm>
 
+using namespace std;
+
 bool special_tile(vector<int>& my_list, int target) {
-    if (find(my_list.begin(), my_list.end(), target) != my_list.end()) {
-        return true;
-    } else {
-        return false;
-    }
+    return find(my_list.begin(), my_list.end(), target) != my_list.end();
 }
 
 void expressGame() {
@@ -26,8 +25,8 @@ void expressGame() {
     int turn = 1;
     int playingPlayer = 1;
     int numberOfPlayers = 2;
-    vector<int> snakes = {8,23,27,32,37,39,73,78,81,99};
-    vector<int> ladders = {3,1,25,33,44,47,58,71,74,96};
+    vector<int> snakes = {8, 23, 27, 32, 37, 39, 73, 78, 81, 99};
+    vector<int> ladders = {3, 1, 25, 33, 44, 47, 58, 71, 74, 96};
     char option;
     string name1, name2;
 
@@ -68,21 +67,17 @@ void expressGame() {
                     cout << "The dice rolled: " << roll << endl;
                     cout << player1.getName() << " goes to square " << newPos << endl;
 
-                    bool SnakeTile = special_tile(snakes,newPos);
+                    bool SnakeTile = special_tile(snakes, newPos);
                     bool LadderTile = special_tile(ladders, newPos);
 
-                    //MODIFICADORES
-                    if (SnakeTile || LadderTile){
-                        if (SnakeTile){
-                            cout<<"Uh oh! tile "<<newPos<<" was a SNAKE tile! You slither down to square "<<newPos-3<<endl;
-                            newPos-=3;
+                    if (SnakeTile || LadderTile) {
+                        if (SnakeTile) {
+                            cout << "Uh oh! tile " << newPos << " was a SNAKE tile! You slither down to square " << newPos - 3 << endl;
+                            newPos -= 3;
                         }
-                        if (LadderTile){
-                            cout<<"Jolly! tile "<<newPos<<" was a LADDER tile! You climb up to square "<<newPos+3<<endl;
-                            newPos+=3;
-                        }
-                        else{
-                            continue;
+                        if (LadderTile) {
+                            cout << "Jolly! tile " << newPos << " was a LADDER tile! You climb up to square " << newPos + 3 << endl;
+                            newPos += 3;
                         }
                     }
 
@@ -93,21 +88,18 @@ void expressGame() {
                     newPos = actualPos + roll;
                     cout << "The dice rolled: " << roll << endl;
                     cout << player2.getName() << " goes to square " << newPos << endl;
-                    bool SnakeTile = special_tile(snakes,newPos);
+
+                    bool SnakeTile = special_tile(snakes, newPos);
                     bool LadderTile = special_tile(ladders, newPos);
 
-                    //MODIFICADORES
-                    if (SnakeTile || LadderTile){
-                        if (SnakeTile){
-                            cout<<"Uh oh! tile "<<newPos<<" was a SNAKE tile! You slither down to square "<<newPos-3<<endl;
-                            newPos-=3;
+                    if (SnakeTile || LadderTile) {
+                        if (SnakeTile) {
+                            cout << "Uh oh! tile " << newPos << " was a SNAKE tile! You slither down to square " << newPos - 3 << endl;
+                            newPos -= 3;
                         }
-                        if (LadderTile){
-                            cout<<"Jolly! tile "<<newPos<<" was a LADDER tile! You climb up to square "<<newPos+3<<endl;
-                            newPos+=3;
-                        }
-                        else{
-                            continue;
+                        if (LadderTile) {
+                            cout << "Jolly! tile " << newPos << " was a LADDER tile! You climb up to square " << newPos + 3 << endl;
+                            newPos += 3;
                         }
                     }
 

@@ -106,7 +106,7 @@ void tradGame() {
     }
 
     if (player1.getPosition() == 100) {
-        cout << player1.getName() << " wins!" << endl;
+        cout << player1.getName() <<" wins!" << endl;
     } else if (player2.getPosition() == 100) {
         cout << player2.getName() << " wins!" << endl;
     }

@@ -1,3 +1,3 @@
-/Users/cgh/Documents/GitHub/snakesAndLadders/cmake-build-debug/CMakeFiles/SerpientesEscaleras.dir
-/Users/cgh/Documents/GitHub/snakesAndLadders/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/cgh/Documents/GitHub/snakesAndLadders/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/emili/OneDrive/Desktop/TEC/Semestre 2/Programacion orientada a objetos/C PLUSPLUS/snakesAndLadders/cmake-build-debug/CMakeFiles/SerpientesEscaleras.dir
+C:/Users/emili/OneDrive/Desktop/TEC/Semestre 2/Programacion orientada a objetos/C PLUSPLUS/snakesAndLadders/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/emili/OneDrive/Desktop/TEC/Semestre 2/Programacion orientada a objetos/C PLUSPLUS/snakesAndLadders/cmake-build-debug/CMakeFiles/rebuild_cache.dir

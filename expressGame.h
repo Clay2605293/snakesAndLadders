@@ -28,33 +28,34 @@ void expressGame() {
     vector<int> snakes = {8, 23, 27, 32, 37, 39, 73, 78, 81, 99};
     vector<int> ladders = {3, 1, 25, 33, 44, 47, 58, 71, 74, 96};
     char option;
+    string line = "========================================================";
     string name1, name2;
 
-    cout << "In this game the L board squares will increase position by 3, S board squares will decrease position by 3." << endl;
-    cout << "As soon as a player reaches tile number 100 or over, wins." << endl;
+    cout << line << endl << endl << "In this game the L board squares will increase position by 3, S board squares will decrease position by 3." << endl;
+    cout << endl << "As soon as a player reaches tile number 100 or over, wins." << endl << endl << line << endl;
 
     Player player1 = Player(1);
     Player player2 = Player(2);
     player1.setPosition(1);
     player2.setPosition(1);
-    cout << "////////////////////////////////////////////////" << endl;
+    cout << line << endl;
 
     while (player1.getPosition() < 100 && player2.getPosition() < 100) {
         cout << player1.getName() << " is in position: " << player1.getPosition() << endl;
-        cout << player2.getName() << " is in position: " << player2.getPosition() << endl;
+        cout << player2.getName() << " is in position: " << player2.getPosition() << endl << line << endl;
         newGame.printTablero(player1.getPosition(), player2.getPosition());
 
-        cout << "Turn " << turn << endl;
+        cout << line << endl << "Turn " << turn << endl;
         if (playingPlayer == 1) {
-            cout << "It's " << player1.getName() << "'s turn" << endl;
+            cout << endl << "It's " << player1.getName() << "'s turn" << endl;
         } else {
             cout << "It's " << player2.getName() << "'s turn" << endl;
         }
 
         cout << "Choose an option" << endl;
-        cout << "R roll dice" << endl;
-        cout << "E exit game" << endl;
-        cout << "Enter selection: ";
+        cout << "\t-R roll dice" << endl;
+        cout << "\t-E exit game" << endl;
+        cout << "\t-Enter selection: ";
         cin >> option;
         option = tolower(option);
         int roll, actualPos, newPos;
@@ -116,7 +117,7 @@ void expressGame() {
                 break;
         }
 
-        cout << "////////////////////////////////////////////////" << endl;
+        cout << endl << line << endl;
     }
 
     if (player1.getPosition() >= 100) {

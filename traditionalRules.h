@@ -13,6 +13,7 @@
 #include <map>
 map<int, int> snakes = {{99, 23}, {78, 37}, {73, 27}, {81, 39}, {32, 8}};
 map<int, int> ladders = {{3, 25}, {15, 44}, {58, 96}, {47, 74}, {33, 71}};
+string line = "========================================================";
 
 
 int handleSnakesAndLadders(int currentPosition) {
@@ -44,22 +45,21 @@ void tradGame() {
     char option;
     string name1, name2;
 
-    cout << "In this game of you fall into a ladder you'll go up until the end of it." << endl;
+    cout << line << endl << endl <<"In this game of you fall into a ladder you'll go up until the end of it." << endl;
     cout << "If you fall into a snake you'll go down until the end of it." << endl;
-    cout << "You have to land exactly in square 100 to win" << endl;
+    cout << "You have to land exactly in square 100 to win" << endl << endl << line << endl;
 
     Player player1 = Player(1);
     Player player2 = Player(2);
     player1.setPosition(1);
     player2.setPosition(1);
-    cout << "////////////////////////////////////////////////" << endl;
 
     while (player1.getPosition() != 100 && player2.getPosition() !=  100) {
         cout << player1.getName() << " is in position: " << player1.getPosition() << endl;
-        cout << player2.getName() << " is in position: " << player2.getPosition() << endl;
+        cout << player2.getName() << " is in position: " << player2.getPosition() << endl << line << endl;
         newGame.printTablero(player1.getPosition(), player2.getPosition());
 
-        cout << "Turn " << turn << endl;
+        cout << line << endl <<  "Turn " << turn << endl;
         if (playingPlayer == 1) {
             cout << "It's " << player1.getName() << "'s turn" << endl;
         } else {
@@ -67,9 +67,9 @@ void tradGame() {
         }
 
         cout << "Choose an option" << endl;
-        cout << "R roll dice" << endl;
-        cout << "E exit game" << endl;
-        cout << "Enter selection: ";
+        cout << "\t-R roll dice" << endl;
+        cout << "\t-E exit game" << endl;
+        cout << "\t-Enter selection: ";
         cin >> option;
         option = tolower(option);
         int roll, actualPos, newPos;
@@ -102,8 +102,7 @@ void tradGame() {
                 cout << "Please choose a valid option." << endl;
                 break;
         }
-
-        cout << "////////////////////////////////////////////////" << endl;
+        cout << endl << line << endl;
     }
 
     if (player1.getPosition() == 100) {
